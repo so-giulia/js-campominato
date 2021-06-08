@@ -34,10 +34,6 @@ while(programArray.length < 16){
     }
 }
 
-//li guardo
-console.log(programArray);
-
-
 //chiedo all'utente (per il momento 100-97 volte) un numero
 var userNum = [];
 
@@ -47,15 +43,14 @@ for(var i = 0; i < 84; i++){
 
     //non posso inserire un numero non compreso tra 1 e 100
     if(requestNum < 1 || requestNum > 100){
-        alert("il numero deve essere compreso tra 1 e 100");
+        document.getElementById("risultati").innerHTML = "Il numero deve essere compreso tra 1 e 100, rigioca la partita!"
     }
 
     //l'utente non può inserire il numero due volte sennò finisce tutto
     if(!userNum.includes(requestNum)){
         userNum.push(requestNum);
     }else{
-        alert("Non puoi inserire lo stesso numero più volte!");
-        userNum = [];
+        document.getElementById("risultati").innerHTML = "Non puoi inserire un numero due volte, rigioca la partita!"
         break;
     }
 
@@ -63,12 +58,13 @@ for(var i = 0; i < 84; i++){
     if(programArray.includes(requestNum)){
         alert("Hai perso!");
         //comunico quante volte ho inserito i numeri giusti
-        document.getElementById("punteggio").innerHTML += " " + (userNum.length-1) + " punti";
+        document.getElementById("risultati").innerHTML += "Hai totalizzato: " + (userNum.length-1) + " punti";
         break;
     }
 
 }
 
-//li guardo
+//controlli console
+console.log(programArray);
 console.log(userNum);
 
