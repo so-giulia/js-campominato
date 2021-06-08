@@ -1,7 +1,9 @@
 //**OK**Il computer deve generare 16 numeri casuali tra 1 e 100.
 //**OK**I numeri non possono essere duplicati.
-//In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
-//L’utente non può inserire più volte lo stesso numero.
+
+//**OK**In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+//**OK**L’utente non può inserire più volte lo stesso numero.
+
 //Se il numero è presente nella lista dei numeri generati, la partita termina,
 //altrimenti si continua chiedendo all’utente un altro numero.
 
@@ -35,3 +37,23 @@ while(programArray.length < 16){
 
 //li guardo
 console.log(programArray);
+
+
+//chiedo all'utente (per il momento 100-97 volte) un numero
+var userNum = [];
+
+for(var i = 0; i < 3; i++){
+    var requestNum = parseInt(prompt("Inserisci un numero"));
+
+    //l'utente non può inserire il numero due volte sennò finisce tutto
+    if(!userNum.includes(requestNum)){
+        userNum.push(requestNum);
+    }else{
+        alert("Non puoi inserire lo stesso numero più volte!");
+        userNum = [];
+        break;
+    }
+}
+
+//li guardo
+console.log(userNum);
