@@ -44,6 +44,7 @@ for(var i = 0; i < 84; i++){
     //non posso inserire un numero non compreso tra 1 e 100
     if(requestNum < 1 || requestNum > 100){
         document.getElementById("risultati").innerHTML = "Il numero deve essere compreso tra 1 e 100, rigioca la partita!"
+        break;
     }
 
     //l'utente non può inserire il numero due volte sennò finisce tutto
