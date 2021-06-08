@@ -4,8 +4,8 @@
 //**OK**In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 //**OK**L’utente non può inserire più volte lo stesso numero.
 
-//Se il numero è presente nella lista dei numeri generati, la partita termina,
-//altrimenti si continua chiedendo all’utente un altro numero.
+//**OK**Se il numero è presente nella lista dei numeri generati, la partita termina,
+//**OK**altrimenti si continua chiedendo all’utente un altro numero.
 
 //La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 
@@ -43,6 +43,7 @@ console.log(programArray);
 var userNum = [];
 
 for(var i = 0; i < 3; i++){
+    
     var requestNum = parseInt(prompt("Inserisci un numero"));
 
     //l'utente non può inserire il numero due volte sennò finisce tutto
@@ -53,6 +54,13 @@ for(var i = 0; i < 3; i++){
         userNum = [];
         break;
     }
+
+    //condizione di perdita partita
+    if(programArray.includes(requestNum)){
+        alert("Hai perso!");
+        break;
+    }
+
 }
 
 //li guardo
