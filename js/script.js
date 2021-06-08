@@ -9,8 +9,7 @@
 
 //La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 
-//Al termine della partita il software deve comunicare il punteggio,
-//cioè il numero di volte che l’utente ha inserito un numero consentito
+//**OK**Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito
 
 
 
@@ -42,7 +41,7 @@ console.log(programArray);
 //chiedo all'utente (per il momento 100-97 volte) un numero
 var userNum = [];
 
-for(var i = 0; i < 3; i++){
+for(var i = 0; i < 84; i++){
     
     var requestNum = parseInt(prompt("Inserisci un numero"));
 
@@ -58,6 +57,8 @@ for(var i = 0; i < 3; i++){
     //condizione di perdita partita
     if(programArray.includes(requestNum)){
         alert("Hai perso!");
+        //comunico quante volte ho inserito i numeri giusti
+        document.getElementById("punteggio").innerHTML += " " + (userNum.length-1) + " punti";
         break;
     }
 
@@ -65,3 +66,4 @@ for(var i = 0; i < 3; i++){
 
 //li guardo
 console.log(userNum);
+
