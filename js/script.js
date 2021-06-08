@@ -43,7 +43,12 @@ var userNum = [];
 
 for(var i = 0; i < 84; i++){
     
-    var requestNum = parseInt(prompt("Inserisci un numero"));
+    var requestNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
+
+    //non posso inserire un numero non compreso tra 1 e 100
+    if(requestNum < 1 || requestNum > 100){
+        alert("il numero deve essere compreso tra 1 e 100");
+    }
 
     //l'utente non può inserire il numero due volte sennò finisce tutto
     if(!userNum.includes(requestNum)){
