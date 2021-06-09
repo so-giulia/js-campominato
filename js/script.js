@@ -22,6 +22,8 @@
 //SVOLGIMENTO
 //———————————
 
+/*
+
 var intMin = 1;
 var intMax = 100;
 var userMax = 100;
@@ -111,3 +113,5 @@ document.getElementById("risultati").innerHTML = msg;
 //controlli console
 console.log(programArray);
 console.log(userArray);
+
+*/

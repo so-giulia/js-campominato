@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{font-size:14px;}
+
+body{color: rgb(43, 48, 114);}
+
+
+/* Debug - delete later */
+
+.debug main{
+    background-color: pink;
+}
+
+/* header */
+
+header{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+}
+
+.header-top, .header-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:80px;
+}
+
+.box-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:35%;
+}
+
+.box{
+    border: 1px solid rgb(43, 48, 114);
+    width:90%;
+    padding:5px 20px;
+    margin-top:10px;
+}
+
+.caption{
+    font-family: 'Roboto', sans-serif;
+    font-size:1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.box-txt{
+    font-size:2rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.smiley{
+    display: inline-block;
+    width:40px;
+    margin: 0 5%;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+
+/* Main */
+
+main{
+    height: calc(100vh - 160px);
+}

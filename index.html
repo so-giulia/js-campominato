@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Campo minato</title>
 </head>
-<body>
+<body class="debug">
+    <!-- header start -->
+    <header>
+        <!-- title start -->
+        <div class="header-top">
+            <h1>Campo Minato</h1>
+        </div>
+        <!-- title end -->
 
-    <p id="risultati"></p>
+        <!-- smiley start -->
+        <div class="header-bottom">
+            <!-- box 1 start -->
+            <span class="box-container">
+                <p class="caption">Punteggio</p>
+                <div class="box">
+                    <p class="box-txt" id="result">32</p>
+                </div>
+            </span>
+            <!-- box 1 end -->
+
+            <img class="smiley" src="img/smiley.svg" alt="Smiley Campo Minato">
+
+            <!-- box 2 start -->
+            <span class="box-container">
+                <p class="caption">Numero bomba</p>
+                <div class="box">
+                    <p class="box-txt" id="bomb">3</p>
+                </div>
+            </span>
+            <!-- box 2 end -->
+        </div>
+        <!-- smiley end -->
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+
+    </main>
+    <!-- main end -->
     
     <!-- Script -->
     <script type="text/javascript" src="js/script.js"></script>
