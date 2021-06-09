@@ -72,28 +72,29 @@ while(programArray.length < 16){
 var userArray = [];
 
 var check = false;
-var messaggio = "";
+var wrongNum = false;
+var msg = "";
 
 //chiedo all'utente un numero
 for(var i = 0; i < (userMax - subtract) && !check; i++){
     //chiedo numero
     var requestNum = parseInt(prompt("Inserisci un numero compreso tra 1 e 100"));
     
-    //non posso inserire un numero non compreso tra 1 e 100
+    //l'utente non può inserire un numero non compreso tra 1 e 100
     if(requestNum < intMin || requestNum > userMax){
-        messaggio = "Il numero deve essere compreso tra 1 e 100, rigioca la partita!"
-        check = true;
+        alert("Attenzione! Il numero deve essere compreso tra 1 e 100!");
+        wrongNum = true;
     }else if(isNaN(requestNum) || requestNum == "null" || requestNum == "undefined"){
-        messaggio = "Inserisci un numero compreso tra 1 e 100, rigioca la partita!"
-        check = true;
+        alert("Attezione! Devi inserire un numero!");
+        wrongNum = true;
     }
 
     //l'utente non può inserire il numero due volte sennò finisce tutto
     if(!isInArray(userArray, requestNum) && !check){
         userArray.push(requestNum);
     }else if(isInArray(userArray, requestNum) && !check){
-        check = true;
-        messaggio = "Non puoi inserire un numero due volte, rigioca la partita!"
+        alert("Attenzione! Non puoi inserire un numero due volte!");
+        wrongNum = true;
     }
 
     //condizione di perdita partita
@@ -101,11 +102,11 @@ for(var i = 0; i < (userMax - subtract) && !check; i++){
         check = true;
         alert("Hai perso!");
         //comunico quante volte ho inserito i numeri giusti
-        messaggio = "Hai totalizzato: " + (userArray.length-1) + " punti";
+        msg = "Hai totalizzato: " + (userArray.length-1) + " punti";
     }
 }
 
-document.getElementById("risultati").innerHTML = messaggio;
+document.getElementById("risultati").innerHTML = msg;
 
 //controlli console
 console.log(programArray);
