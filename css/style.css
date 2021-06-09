@@ -27,6 +27,10 @@ h1{
     height:80px;
 }
 
+.header-top{
+    margin-bottom:20px;
+}
+
 .header-bottom{
     justify-content: space-between;
     padding:0 10%;
@@ -79,7 +83,7 @@ h1{
 /* Main */
 
 main{
-    height: calc(100vh - 160px);
+    height: calc(100vh - 180px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,4 +123,17 @@ h2.caption{
     text-align: center;
     line-height: 1.5;
     font-weight:300;
+}
+
+/* Media queries */
+
+@media screen and (min-width:1920px){
+    h2.caption, #bombArray {font-size: 1.5rem;}
+    #bombArray {width: 25px;}
+}
+
+@media screen and (min-width:1200px){
+    .header-bottom {justify-content: center;}
+    .smiley {margin: 0 5%;}
+    .box-container {width: 20%;}
 }

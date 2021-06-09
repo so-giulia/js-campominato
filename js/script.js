@@ -75,6 +75,7 @@ var userArray = [];
 var check = false;
 var wrongNum = false;
 var msg = "";
+var msgBomb = "";
 
 //chiedo all'utente un numero
 for(var i = 0; i < (userMax - subtract) && !check; i++){
@@ -104,11 +105,13 @@ for(var i = 0; i < (userMax - subtract) && !check; i++){
         alert("Hai perso!");
         //comunico quante volte ho inserito i numeri giusti
         msg = userArray.length-1;
+        msgBomb = requestNum;
     }
 }
 
 document.getElementById("result").innerHTML = msg;
 document.getElementById("bombArray").innerHTML = (programArray.join(" "));
+document.getElementById("bomb").innerHTML = msgBomb;
 
 //controlli console
 console.log(programArray);
