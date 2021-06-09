@@ -8,13 +8,6 @@ html{font-size:14px;}
 
 body{color: rgb(43, 48, 114);}
 
-
-/* Debug - delete later */
-
-.debug main{
-    background-color: pink;
-}
-
 /* header */
 
 header{
@@ -34,6 +27,11 @@ h1{
     height:80px;
 }
 
+.header-bottom{
+    justify-content: space-between;
+    padding:0 10%;
+}
+
 .box-container{
     display:flex;
     flex-direction: column;
@@ -45,7 +43,7 @@ h1{
 
 .box{
     border: 1px solid rgb(43, 48, 114);
-    width:90%;
+    width:100%;
     padding:5px 20px;
     margin-top:10px;
 }
@@ -82,4 +80,43 @@ h1{
 
 main{
     height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-box{
+    background-color: rgb(43, 48, 114);
+    color: rgb(255, 255, 255);
+    width: 80%;
+    height: 80%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2.caption{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#bombArray{
+    width:15px;
+
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.5;
+    font-weight:300;
 }

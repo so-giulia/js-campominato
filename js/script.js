@@ -22,7 +22,6 @@
 //SVOLGIMENTO
 //———————————
 
-/*
 
 var intMin = 1;
 var intMax = 100;
@@ -104,14 +103,14 @@ for(var i = 0; i < (userMax - subtract) && !check; i++){
         check = true;
         alert("Hai perso!");
         //comunico quante volte ho inserito i numeri giusti
-        msg = "Hai totalizzato: " + (userArray.length-1) + " punti";
+        msg = userArray.length-1;
     }
 }
 
-document.getElementById("risultati").innerHTML = msg;
+document.getElementById("result").innerHTML = msg;
+document.getElementById("bombArray").innerHTML = (programArray.join(" "));
 
 //controlli console
 console.log(programArray);
 console.log(userArray);
 
-*/
